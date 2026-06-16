@@ -1,0 +1,90 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+  z-index: 999;
+
+  display: flex;
+  justify-content: center;
+}
+
+/* CONTAINER BIAR RAPI */
+.nav-container {
+  width: 100%;
+  max-width: 1200px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 20px;
+}
+
+/* LOGO */
+.logo {
+  color: #c5d900;
+  font-weight: bold;
+  letter-spacing: 2px;
+
+  cursor: pointer;
+
+  font-size: 14px;
+
+  white-space: nowrap;
+}
+
+/* MENU */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  flex-wrap: nowrap;
+}
+
+/* BUTTON */
+.nav-links button {
+  background: transparent;
+  border: 1px solid transparent;
+
+  color: white;
+
+  padding: 8px 14px;
+
+  border-radius: 20px;
+
+  cursor: pointer;
+
+  font-size: 13px;
+
+  transition: 0.25s;
+
+  white-space: nowrap;
+}
+
+/* HOVER */
+.nav-links button:hover {
+  border: 1px solid #c5d900;
+  color: #c5d900;
+  transform: translateY(-2px);
+}
+
+/* SPECIAL BUTTON */
+.special-btn {
+  background: #c5d900;
+  color: black !important;
+  font-weight: bold;
+}
+
+.special-btn:hover {
+  box-shadow: 0 0 15px rgba(197, 217, 0, 0.5);
+}

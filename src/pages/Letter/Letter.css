@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+.letter-page {
+  min-height: 100vh;
+  background: #050505; /* Hitam pekat mewah ala teater */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 120px 24px 60px 24px;
+  box-sizing: border-box;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Semburan cahaya lampu proyektor tipis di background */
+.letter-page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 85%;
+  height: 350px;
+  background: radial-gradient(circle, rgba(197, 217, 0, 0.07) 0%, transparent 75%);
+  pointer-events: none;
+}
+
+/* Box Glassmorphism Mewah */
+.letter-box {
+  width: 100%;
+  max-width: 750px;
+  background: linear-gradient(145deg, rgba(20, 20, 20, 0.85) 0%, rgba(13, 13, 13, 0.9) 100%);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(197, 217, 0, 0.3); 
+  padding: 60px 50px;
+  border-radius: 24px;
+  text-align: center;
+  position: relative;
+  box-shadow: 
+    0 30px 60px rgba(0, 0, 0, 0.8),
+    0 0 50px rgba(197, 217, 0, 0.05),
+    inset 0 1px 1px rgba(255, 255, 255, 0.05);
+}
+
+/* Ornamen Tiket Bioskop VIP */
+.letter-box::before, .letter-box::after {
+  content: "🎬";
+  position: absolute;
+  font-size: 0.85rem;
+  opacity: 0.25;
+  color: #c5d900;
+}
+.letter-box::before { top: 25px; left: 25px; }
+.letter-box::after { top: 25px; right: 25px; }
+
+/* Judul Gaya Poster Film Hollywood */
+.movie-poster-title {
+  font-family: 'Cinzel', serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #c5d900;
+  letter-spacing: 2px;
+  text-shadow: 0 0 15px rgba(197, 217, 0, 0.4);
+  margin: 0 0 10px 0;
+}
+
+/* Garis Aksen Pembatas Kuning Neon */
+.title-divider {
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #c5d900, transparent);
+  margin: 0 auto 40px auto;
+}
+
+/* Teks Pre yang Dioptimasi Performanya */
+.letter-box pre.typing-text {
+  font-family: 'Poppins', sans-serif;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: #e5e5e5;
+  margin: 0 0 20px 0;
+  letter-spacing: 0.3px;
+  
+  /* Kunci utama menghilangkan stuttering/patah-patah */
+  contain: content;
+  display: inline-block;
+  width: 100%;
+  box-sizing: border-box;
+  padding-right: 4px;
+  transition: all 0.08s ease-out;
+
+  /* Efek Kursor Ketik Kedip Sinematik */
+  border-right: 2px solid #c5d900;
+  animation: blinkCaret 0.8s step-end infinite;
+}
+
+/* Tombol Aksi */
+.letter-box button {
+  margin-top: 20px;
+  padding: 14px 40px;
+  border: none;
+  background: #c5d900;
+  color: #000000;
+  cursor: pointer;
+  border-radius: 30px;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.25s ease, background-color 0.25s ease;
+  box-shadow: 0 6px 20px rgba(197, 217, 0, 0.25);
+  animation: fadeInButton 0.6s ease-out forwards;
+}
+
+.letter-box button:hover {
+  transform: translateY(-3px) scale(1.03);
+  background: #d4e900;
+  box-shadow: 0 10px 30px rgba(197, 217, 0, 0.45);
+}
+
+/* Animasi Kursor */
+@keyframes blinkCaret {
+  from, to { border-color: transparent }
+  50% { border-color: #c5d900; }
+}
+
+@keyframes fadeInButton {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsif Layar HP/Mobile */
+@media (max-width: 768px) {
+  .letter-page {
+    padding: 100px 16px 40px 16px;
+  }
+  .letter-box {
+    padding: 45px 24px;
+    border-radius: 20px;
+  }
+  .movie-poster-title {
+    font-size: 1.85rem;
+  }
+  .letter-box pre.typing-text {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+}

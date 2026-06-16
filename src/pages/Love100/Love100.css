@@ -1,0 +1,51 @@
+.love-page {
+  min-height: 100vh;
+
+  background: black;
+
+  display: flex;
+
+  padding: 100px 8%;
+}
+
+.love-left {
+  width: 40%;
+}
+
+.love-left h1 {
+  font-size: 7rem;
+
+  color: #c5d900;
+}
+
+.love-left h2 {
+  color: white;
+}
+
+.love-right {
+  flex: 1;
+}
+
+.reason-card {
+  background: #111;
+
+  padding: 20px;
+
+  margin-bottom: 15px;
+
+  border-radius: 15px;
+
+  display: flex;
+
+  gap: 20px;
+}
+
+.reason-card span {
+  color: #c5d900;
+
+  font-size: 1.5rem;
+}
+
+.reason-card p {
+  color: white;
+}

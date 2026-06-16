@@ -1,0 +1,47 @@
+.about-page {
+  min-height: 100vh;
+
+  background: black;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 80px;
+
+  padding: 50px;
+}
+
+.about-left img {
+  width: 400px;
+
+  border-radius: 20px;
+}
+
+.about-right {
+  max-width: 500px;
+}
+
+.about-right h1 {
+  color: #c5d900;
+
+  margin-bottom: 30px;
+}
+
+.about-right li {
+  color: white;
+
+  margin-bottom: 15px;
+}
+
+.about-right button {
+  margin-top: 30px;
+
+  padding: 15px 30px;
+
+  border: none;
+
+  background: #c5d900;
+
+  cursor: pointer;
+}
