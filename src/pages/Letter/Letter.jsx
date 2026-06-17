@@ -34,7 +34,7 @@ and somehow, God chose to pack all of that perfection
 into a single, beautiful soul.
 
 A soul that has a name...
-Nailah Nur Azizah.`;
+Nailah Nur Aziizah.`;
 
   useEffect(() => {
     let index = 0;
