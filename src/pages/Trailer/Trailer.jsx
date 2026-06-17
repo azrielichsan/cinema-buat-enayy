@@ -29,7 +29,7 @@ function Trailer() {
         <button
           onClick={() => navigate("/gallery")}
         >
-          CONTINUE
+          CONTINUE →
         </button>
 
       </div>

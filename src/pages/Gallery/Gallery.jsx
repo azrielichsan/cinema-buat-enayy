@@ -33,7 +33,7 @@ function Gallery() {
         className="next-btn"
         onClick={() => navigate("/about-her")}
       >
-        NEXT →
+        CONTINUE →
       </button>
 
     </div>

@@ -57,7 +57,7 @@ function AboutHer() {
         <button
           onClick={() => navigate("/letter")}
         >
-          NEXT →
+          CONTINUE →
         </button>
 
       </div>
